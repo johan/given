@@ -1,0 +1,13 @@
+{ "framework": "jasmine"
+, "fail_on_zero_tests": true
+, "src_files":
+  [ "given.js"
+  , "tests/*.coffee"
+  ]
+, "serve_files":
+  [ "given.js"
+  , "tests/all.js"
+  ]
+, "before_tests":
+    "cat tests/*.coffee | ./node_modules/.bin/coffee -j -o tests/all.js"
+}
