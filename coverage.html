@@ -1,0 +1,61 @@
+<html><head>
+<title>Code coverage</title>
+<style id="css">
+/*
+
+ .f = function
+ .s = statement
+ .b = branch
+
+ #f-<N> = function #N
+ #s-<N> = statement #N
+ #b-<N>-<M> = sub-branch #M of branch #N
+
+ .x = never ran!
+ .c = ran at least once
+ .c-<N> = ran upwards of e^N times
+
+ .f-focus = the currently hovered innermost function
+ .b.focus = the currently hovered branch and all its other sub-branches
+ .b.focus:hover = the currently hovered sub-branch
+
+*/
+
+.b.c, .s.c,
+.s.c-1 { color: #000; }
+/*
+.s.c-2 { color: #010; }
+.s.c-3 { color: #020; }
+.s.c-4 { color: #030; }
+.s.c-5 { color: #040; }
+.s.c-6 { color: #050; }
+.s.c-7 { color: #060; }
+.s.c   { color: #070; }
+*/
+.s.x,
+.b.x   { color: #f00; }
+
+.b, .f     { outline: 1px solid transparent; }
+.b.focus   { outline-color: #0f0; }
+.b.focus.x { outline-color: #f00; }
+.b.focus.c:hover { background-color: #afa; }
+.b.focus.x:hover { background-color: #faa; }
+
+.f-focus { box-shadow: -1px 0 #000; }
+.f-focus { box-shadow: -1px 0 #000; }
+
+/* hovered function name */
+.f-focus > .s:first-of-type {
+  font-weight: bold;
+}
+
+.f > .s:first-of-type.x {
+  color: inherit; /* hack: counteract these being wrongly marked "unvisited" */
+}
+
+</style>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="raw-given.js"></script>
+<script src="coverage.js"></script>
+</head><body style="white-space: pre; font-family: monospace">
+</body></html>
