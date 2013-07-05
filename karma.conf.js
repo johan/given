@@ -15,7 +15,8 @@ var basePath = '' // base path used to resolve files and exclude
   , logLevel = LOG_INFO // LOG_DISABLE, LOG_ERROR, LOG_WARN, LOG_INFO, LOG_DEBUG
   , autoWatch = true // watch files and execute tests whenever any file changes
   , browsers = // Mac: PhantomJS, Chrome, ChromeCanary, Firefox, Opera, Safari
-    ['PhantomJS']
+    ['PhantomJS', 'Chrome', 'ChromeCanary']
   , captureTimeout = 60e3 // kill browser in if it's still not captured in 1 min
+  , reportSlowerThan = 20 // any test > 20ms is suspect - warn about it
   , singleRun = false // true->continuous integration: grab browsers, test, exit
   ;
