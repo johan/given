@@ -3,11 +3,10 @@
 , "description": "Declarative BOM dependencies"
 , "main": "given.js"
 , "scripts":
-  { "test": "./node_modules/.bin/testem ci -b -l chrome"
+  { "test": "./node_modules/.bin/karma start --single-run"
   }
 , "author": "Johan Sundström <oyasumi@gmail.com>"
 , "devDependencies":
-  { "coffee-script-redux": "~2.0.0"
-  , "testem": "0.3.12"
+  { "karma": "0.8.6"
   }
 }
