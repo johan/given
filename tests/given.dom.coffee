@@ -193,7 +193,7 @@ describe 'given.dom(dom spec type 2: an object showing the structure you want)',
     what = given.dom({ c:"xpath count(//script)" })
     expect(what).toEqual jasmine.any Object
     expect(N = what.c).toEqual jasmine.any Number
-    console.log "given.dom({ c: count(…) }) found #{pluralize N, 'script'}"
+    # console.log "given.dom({ c: count(…) }) found #{pluralize N, 'script'}"
     delete what.c
     expect(what).toEqual {}
 
@@ -226,7 +226,7 @@ describe 'given.dom(dom spec type 3: [context_spec, per_match_spec])', ->
     what = given.dom(["css? script:not([src])", "xpath string(.)"])
     expect(typeof what).toBe 'string'
     desc = 'Code of first inline script tag'
-    console.log "#{desc}:\n#{what}\n(#{desc} ends.)"
+    #console.log "#{desc}:\n#{what}\n(#{desc} ends.)"
 
   assertion '''given.dom(["css? script:not([src])", "xpath! string(@src)"])
                => undefined (empty string is not truthy => not a match)''', ->
