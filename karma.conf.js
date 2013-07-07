@@ -14,7 +14,7 @@ var basePath = '' // base path used to resolve files and exclude
   , reporters = // test results reporter to use: 'dots', 'progress', 'junit'
     ['progress', 'coverage']
   , coverageReporter = // where to create Istanbul's code coverage report
-    { type: 'text-summary'
+    { type: 'html'
     , dir: 'coverage/'
     }
   , port = 9876 // web server port
